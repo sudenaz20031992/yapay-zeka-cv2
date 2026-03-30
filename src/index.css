@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-cyborg-bg: #050505;
+  --color-cyborg-accent: #00f2ff;
+  --color-cyborg-secondary: #ff00ea;
+  --color-cyborg-card: #111111;
+  --color-cyborg-border: #222222;
+}
+
+@layer base {
+  body {
+    @apply bg-cyborg-bg text-white font-sans selection:bg-cyborg-accent selection:text-black;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-wider uppercase;
+  }
+}
+
+.cyborg-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+.cyborg-glow-pink {
+  box-shadow: 0 0 15px rgba(255, 0, 234, 0.3);
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
